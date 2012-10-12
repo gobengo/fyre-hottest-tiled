@@ -1,0 +1,11 @@
+{
+  "jam": {
+    "packageDir": "public/vendor",
+    "baseUrl": "public",
+    "main": "main.js",
+    "dependencies": {
+        "jquery": null,
+        "text": null
+    }
+  }
+}
