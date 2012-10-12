@@ -2,6 +2,8 @@
 
 A Livefyre StreamHub App that dynamically displays the 5 hottest Collections within a Network
 
+Note: This is a proof of concept. Notable limitation: The background images are fixed an likely irrelevant, but look cool. What do you think I should do?
+
 # screenshot
 
 ![fyre-hottest-tile example](http://gobengo.github.com/fyre-hottest-tiled/images/screenshot.png)
