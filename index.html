@@ -36,6 +36,15 @@ open "http://localhost:8888"
 </code></pre>
 
 <p>The HTML and CSS for this have been blatantly copied from Engadget.com.</p>
+
+<link rel="stylesheet" href="app/styles.css" />
+<h3>Example</h3>
+<a href="http://bootstrap.engadget.fyre.co/api/v3.0/hottest/">http://bootstrap.engadget.fyre.co/api/v3.0/hottest/</a>
+<div class="topstories" id="hottest">
+    <div class="grid_holder">
+    </div>
+</div>
+
         </section>
 
         <aside id="sidebar">
@@ -56,5 +65,15 @@ open "http://localhost:8888"
     </div>
 
   
+<!-- JavaScript -->
+<script type="text/javascript" src="app/vendor/require.js"></script>
+<script>
+requirejs.config({
+  baseUrl: 'app'
+});
+</script>
+<script>
+require(['main']);
+</script>
   </body>
 </html>
