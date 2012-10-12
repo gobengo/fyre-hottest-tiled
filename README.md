@@ -1,4 +1,4 @@
-# fyre-hottest-tile
+# fyre-hottest-tiled
 
 A Livefyre StreamHub App that displays the 5 hottest Collections within a Network
 
