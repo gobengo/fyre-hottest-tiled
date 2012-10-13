@@ -11,7 +11,7 @@ If you provide an EMBEDLEY_API_KEY in `main.js`, relevant images will automagica
 ![fyre-hottest-tile example](http://gobengo.github.com/fyre-hottest-tiled/images/screenshot.png)
 
 ## Engadget
-![fyre-hottest-tile engadget](http://gobengo.github.com/fyre-hottest-tiled/images/screenshot-engadget.png)
+![fyre-hottest-tile engadget](http://gobengo.github.com/fyre-hottest-tiled/images/engadget.png)
 
 # instructions
 The example page is in `public/index.html`. It must be served over HTTP for CORS to work.
