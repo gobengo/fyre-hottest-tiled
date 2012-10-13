@@ -4,8 +4,14 @@ require([
 'text!templates/collection-medium.html',
 'text!templates/collection-small.html'
 ],
+
+// TODO
+// * Don't require external HTML. Swap it in from a main template. User shouldn't have to put any class on their shit or anything
+
 function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
-	var URL = "http://bootstrap.engadget.fyre.co/api/v3.0/hottest/";
+	var URL = "http://bootstrap.sportsillustrated.fyre.co/api/v3.0/hottest/";
+	var USE_EMBEDLY_IMAGES = true;
+    var EMBEDLY_API_KEY = "";
 
 	$.ajax({
 		url: URL,
@@ -63,6 +69,37 @@ function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
 		$(function($) {
 			var $main = $main || $('#hottest .grid_holder');
 			$main.append(html);
+			if (USE_EMBEDLY_IMAGES) {
+				fetchBackgroundImages($main);
+			}
 		});
-	}	
+	}
+
+	function fetchBackgroundImages ($el) {
+		var $elements = $el.find('.a_block');
+		$elements.each(function(index, collectionElement) {
+			var url = $(collectionElement).attr('href');
+			console.log('url', url);
+			url = "http://api.embed.ly/1/preview?key="+EMBEDLY_API_KEY+"&url=" + escape(url);
+			$.ajax({
+				url: url,
+				dataType: 'jsonp',
+				success: function(data, status) {
+					embedlyRequestCallback(collectionElement, data, status)
+				}
+			});
+		});
+	}
+
+	function embedlyRequestCallback (element, data, status) {
+		console.log('emreq', arguments);
+		var images = data.images
+		  , image;
+		if (images) {
+			image = images[0];
+			if (image) {
+				$(element).find('img').attr('src', data.images[0].url);
+			}
+		}
+	}
 })
