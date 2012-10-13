@@ -26,6 +26,9 @@ If you provide an EMBEDLEY_API_KEY in `main.js`, relevant images will automagica
 ![fyre-hottest-tile thesun](http://gobengo.github.com/fyre-hottest-tiled/images/thesun.png)
 
 # instructions
+
+Most of the code is in `public/main.js`. Templates are in `public/template`.
+
 The example page is in `public/index.html`. It must be served over HTTP for CORS to work.
 
     cd fyre-hottest-tiled/public
