@@ -20,4 +20,8 @@ The example page is in `public/index.html`. It must be served over HTTP for CORS
     python -m SimpleHTTPServer 8888
     open "http://localhost:8888"
 
+And served over port 80 for embedly to work. (I also set up an /etc/hosts entry for port80.com to avoid 'localhost')
+
+    sudo python -m SimpleHTTPServer 80
+
 The HTML and CSS for this have been blatantly copied from Engadget.com.
