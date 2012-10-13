@@ -7,12 +7,14 @@ require([
 function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
 	var URL = "http://bootstrap.engadget.fyre.co/api/v3.0/hottest/";
 
+	/*
+	 * Request the StreamHub Heat API
+	 */
 	$.ajax({
 		url: URL,
 		dataType: 'jsonp',
 		success: heatRequestCallback
 	});
-	
 	function heatRequestCallback (response) {
 		if (response.code !== 200) {
 			console.log("Error fetching Heat API", arguments);
@@ -20,6 +22,9 @@ function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
 		parseHeatData(response.data);
 	}
 
+	/*
+	 * Normalize the response data from the Heat API
+	 */
 	function parseHeatData (data) {
 		var parsedData = $.map(data, function (c, index) {
 			return ({
@@ -31,6 +36,9 @@ function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
 		buildHtml(parsedData);
 	}
 
+	/*
+	 * Build an HTML string of the initial load of the widget
+	 */
 	function buildHtml (data) {
 		var parts = []
 		  , html;
@@ -51,6 +59,9 @@ function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
 		render(parts.join(''));
 	}
 
+	/*
+	 * Render a template with collection data
+	 */
 	function renderCollection (template, collection) {
 		return template
 			.replace('{{ url }}', collection.url)
@@ -58,6 +69,9 @@ function($, tCollectionLarge, tCollectionMedium, tCollectionSmall) {
 			.replace('{{ heat }}', collection.heat.toFixed(1));
 	}
 
+	/*
+	 * Add the full html to the widget
+	 */
 	function render (html) {
 		var $main;
 		$(function($) {
