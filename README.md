@@ -13,6 +13,18 @@ If you provide an EMBEDLEY_API_KEY in `main.js`, relevant images will automagica
 ## Engadget
 ![fyre-hottest-tile engadget](http://gobengo.github.com/fyre-hottest-tiled/images/engadget.png)
 
+## The Daily Beast 
+![fyre-hottest-tile thedailybeast](http://gobengo.github.com/fyre-hottest-tiled/images/dailybeast.png)
+
+## Empower Network 
+![fyre-hottest-tile empowernetwork](http://gobengo.github.com/fyre-hottest-tiled/images/empowernetwork.png)
+
+## Fox News 
+![fyre-hottest-tile foxnews](http://gobengo.github.com/fyre-hottest-tiled/images/foxnews.png)
+
+## The Sun 
+![fyre-hottest-tile thesun](http://gobengo.github.com/fyre-hottest-tiled/images/thesun.png)
+
 # instructions
 The example page is in `public/index.html`. It must be served over HTTP for CORS to work.
 
