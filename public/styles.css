@@ -53,15 +53,21 @@
 	
 	.new_posts{ cursor: pointer; display:inline; font-style:italic; float: left; margin-left: 15px; margin-top: -3px; }
 	
-	.topstories .a_block{
+	.topstories .a_block {
 		float:left; display:inline;
 		position:relative;
 		margin-left:1px;
 		margin-bottom:1px;
+		overflow: hidden;
 	}
 	.topstories .a_block:nth-child(1),
 	.topstories .a_block:nth-child(3) {margin-left:0px;}
-		.topstories .a_block img{float:left; display:inline}
+		.topstories .a_block img {
+			float:left;
+			display:inline;
+			width: 100%;
+			min-height: 100%;
+		}
 		.topstories .a_block .txt_holder{
 			position:absolute;
 			bottom:0;
